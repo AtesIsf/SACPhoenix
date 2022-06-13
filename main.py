@@ -7,10 +7,10 @@ EPOCHS = (20, 40, 80)
 
 for b in BATCH_SIZE:
     for e in EPOCHS:
-        name = f"Batch{b}-Epoch{e}"
+        name = f"Batch:{b}-Epoch:{e}"
         tb = TensorBoard(f"./logs/{ARCHITECTURE}/{name}")
 
-        model.compile(optimizer="adam", loss="mse")
-        model.fit(x=trainx, y=trainy, batch_size=32, epochs=20, validation_data=(valx, valy))
+        model.compile(optimizer="adam", loss="sparse_categorical_crossentropy", metrics=["accuracy"])
+        model.fit(x=trainx, y=trainy, batch_size=32, epochs=20, validation_data=(valx, valy), callbacks=tb)
 
         model.save(f"./models/{ARCHITECTURE}/{name}")

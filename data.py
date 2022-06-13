@@ -16,5 +16,3 @@ testx = data[val_end:test_end,:17]
 testy = data[val_end:test_end,17:]
 trainx = data[test_end:,:17]
 trainy = data[test_end:,17:]
-
-print(f"Training: {len(trainx)} Validation: {len(valx)} Test: {len(testx)}\n")

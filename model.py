@@ -21,4 +21,3 @@ model.add(Dropout(0.2))
 
 
 model.add(Dense(2, activation="softmax")) # Do not change the shape
-print(model.summary())
