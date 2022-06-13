@@ -9,7 +9,10 @@ model = keras.Sequential()
 model.add(keras.layers.Input(shape=(17,))) # Do not change the shape
 
 # Tweak the layers in between
-model.add(Dense(100, activation="sigmoid"))
+model.add(Dense(200, activation="sigmoid"))
+model.add(Dropout(0.2))
+
+model.add(Dense(200, activation="sigmoid"))
 model.add(Dropout(0.2))
 
 model.add(Dense(100, activation="sigmoid"))
