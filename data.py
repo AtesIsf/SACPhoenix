@@ -5,7 +5,7 @@ import numpy as np
 TEST_PERCENTAGE = 0.15
 VAL_PERCENTAGE = 0.1
 
-data = read_csv("./data.txt", header = None).to_numpy(copy=True)
+data = read_csv("./data_3.txt", header = None).to_numpy(copy=True)
 np.random.shuffle(data)
 
 val_end = int(len(data) * VAL_PERCENTAGE)

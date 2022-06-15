@@ -3,7 +3,7 @@ from keras.layers import Dense, Dropout
 
 ### Creating the model ###
 
-ARCHITECTURE = "3"
+ARCHITECTURE = "4"
 
 model = keras.Sequential()
 model.add(keras.layers.Input(shape=(17,))) # Do not change the shape
